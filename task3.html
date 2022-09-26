@@ -7,11 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-
+    <ol id="todo-list"></ol>
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script> 
-    
+    let a= ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+    for (let index = 0; index < a.length; index++) {
+        $("#todo-list").append('<li class="task">'+a[index] +'</li>',);
+    }
     </script>
 </body>
 </html>
