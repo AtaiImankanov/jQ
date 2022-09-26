@@ -7,11 +7,34 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="cart-items">
 
+        <div class="item">Milk 1 l.<span class="qty"> x 2</span></div>
+    
+        <div class="item">Cola 1.5 l. <span class="qty"> x 1</span></div>
+    
+        <div class="item">Bread<span class="qty"> x 2</span></div>
+    
+        <div class="item">Cheese<span class="qty"> x 1</span></div>
+    
+        <div class="item">Chocolate bar<span class="qty"> x 3</span></div>
+    
+    </div>
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script> 
-    
-    </script>
+     $('.item').eq(1).contents().filter(function(){
+    return this.nodeType === 3;
+}).remove();
+
+$('.item').eq(4).contents().filter(function(){
+    return this.nodeType ===3;
+}).replaceWith("Canned Fish");
+
+$('.item').eq(4).contents().filter(function(){
+    return this.nodeType === 1;
+}).text(" x 4");
+
+</script>
 </body>
 </html>
